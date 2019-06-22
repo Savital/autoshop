@@ -15,5 +15,5 @@ install:
 
 # command to run tests
 script:
-  - python tests/test_app.py
+  - python test_app.py
   - pycodestyle --statistics -qq app.py
