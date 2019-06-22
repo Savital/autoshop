@@ -1,0 +1,19 @@
+language: python
+sudo: false
+
+python:
+  - "3.6"
+# command to install dependencies
+
+branches:
+  only:
+    - master
+
+install:
+  - pip install -r requirements.txt
+  - pip install pycodestyle
+
+# command to run tests
+script:
+  - python tests/test_app.py
+  - pycodestyle --statistics -qq app.py
