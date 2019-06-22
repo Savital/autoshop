@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link rel="icon" sizes="16x16" href="/static/favicon.png">
+</head>
+<body>
+<div class="container">
+    <div class="header clearfix">
+        <nav>
+            <ul class="nav nav-pills pull-right">
+                <li role="presentation"><a href="/">Главная</a></li>
+                <li role="presentation"><a href="/about">О нас</a></li>
+            </ul>
+        </nav>
+    </div>
+    {% block body %}
+    {% endblock %}
+    <footer class="footer">
+        <p>© 2019 Savital</p>
+    </footer>
+</div>
+</body>
+</html>
