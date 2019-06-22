@@ -1,14 +1,15 @@
 from flask import Flask
-from flask import render_template
-
-app = Flask(__name__)
 
 
-@app.route('/')
-def render_main(name=None):
-    return render_template('main.html', name=name)
+app = Flask(__name__, instance_relative_config=True)
 
+# Load the views
+import views
+
+# Load the config file
+app.config.from_object('config')
 
 if __name__ == '__main__':
     """starting app"""
     app.run()
+
