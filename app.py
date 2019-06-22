@@ -10,4 +10,5 @@ def render_main(name=None):
 
 
 if __name__ == '__main__':
+    """starting app"""
     app.run()
