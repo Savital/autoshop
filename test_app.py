@@ -5,6 +5,7 @@ import unittest
 
 class BasicTestCase(unittest.TestCase):
     """initial test. ensure flask was set up correctly"""
+
     def test_index(self):
         tester = app.test_client(self)
         response = tester.get('/', content_type='html/text')
